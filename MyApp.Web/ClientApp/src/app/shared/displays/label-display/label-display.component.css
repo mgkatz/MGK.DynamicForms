@@ -1,0 +1,10 @@
+.label-display {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.required:after { 
+    color: #d00;
+    content: "*";
+}

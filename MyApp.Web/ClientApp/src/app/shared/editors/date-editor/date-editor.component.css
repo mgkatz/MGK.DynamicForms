@@ -1,0 +1,10 @@
+.form-control-date {
+    border-radius: .25rem !important;
+    width: 220px;
+}
+
+.input-group-date {
+    margin-bottom: 15px;
+    width: 219px;
+}
+

@@ -1,0 +1,12 @@
+<ng-container [formGroup]="form">
+    <div class="form-group">
+        <app-label-display [metadata]="labelMetadata"></app-label-display>
+        <label class="switch switch-left-right">
+            <input class="switch-input" type="checkbox"
+                [id]="metadata.id"
+                [formControlName]="metadata.id" />
+            <span class="switch-label" [attr.data-on]="on" [attr.data-off]="off"></span> 
+            <span class="switch-handle"></span> 
+        </label>
+    </div>
+</ng-container>

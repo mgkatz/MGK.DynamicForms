@@ -1,0 +1,8 @@
+<ng-container>
+    <div>
+      <label class="label-display" [ngClass]="{'required': isLabelRequired()}"
+        for="{{metadata.id}}">
+          {{hasValue(metadata.label) ? metadata.label : "&nbsp;"}}
+      </label>
+    </div>
+</ng-container>

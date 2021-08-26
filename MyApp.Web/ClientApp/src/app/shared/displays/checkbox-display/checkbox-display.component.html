@@ -1,0 +1,11 @@
+<ng-container>
+    <div class="group-inline col-12">
+        <div class="form-check">
+            <input readonly [disabled]="true" type="checkbox" 
+                class="form-check-input" [id]="metadata.id" checked>
+            <input *ngIf="!value" readonly [disabled]="true" type="checkbox" 
+                class="form-check-input" [id]="metadata.id">
+            <label class="form-check-label">{{value}}</label>
+        </div>
+    </div>
+</ng-container>

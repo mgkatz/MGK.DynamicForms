@@ -1,0 +1,28 @@
+<ng-container [formGroup]="form">
+    <!-- Label -->
+    <app-label-display [metadata]="labelMetadata"></app-label-display>
+    <!-- Date Control -->
+    <div class="input-group input-group-date">
+      <input class="form-control form-control-date"
+        angular-mydatepicker
+        [id]="metadata.id"
+        [formControlName]="metadata.id"
+        [placeholder]="placeholder"
+        [options]="dateEditorOptions"
+        [locale]="locale"
+        name="{{metadata.id}}"
+        #dp="angular-mydatepicker" />
+      <!-- Clear Date Button -->
+      <div class="input-group-append">
+        <button type="button" class="btn btn-secondary" (click)="dp.clearDate()">
+          <fa-icon [icon]="icons.closeIcon"></fa-icon>
+        </button>
+      </div>
+      <!-- Show/Hide Calendar button -->
+      <div class="input-group-append">
+        <button type="button" class="btn btn-info" (click)="dp.toggleCalendar()">
+          <fa-icon [icon]="icons.calendarIcon"></fa-icon>
+        </button>
+      </div>
+    </div>
+</ng-container>

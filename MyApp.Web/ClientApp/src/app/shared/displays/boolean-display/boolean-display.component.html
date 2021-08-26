@@ -1,0 +1,11 @@
+<ng-container>
+    <div class="group-inline col-12">
+        <div class="profile-info-row">
+            <div class="profile-info-name">{{metadata.label}}</div>
+            <div class="profile-info-value">
+                <span i18n *ngIf="value">Yes</span>
+                <span i18n *ngIf="!value">No</span>
+            </div>
+        </div>
+    </div>
+</ng-container>

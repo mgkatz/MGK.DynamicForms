@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MGK.Extensions" Version="1.0.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Infrastructure\Resources\MessagesResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MessagesResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Infrastructure\Resources\MessagesResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessagesResources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>DynamicResouces</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

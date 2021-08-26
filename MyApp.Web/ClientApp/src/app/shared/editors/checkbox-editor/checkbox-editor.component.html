@@ -1,0 +1,12 @@
+<ng-container [formGroup]="form">
+    <div class="form-group">
+        <app-label-display [metadata]="labelMetadata"></app-label-display>
+        <div class="form-control form-control-checkbox">
+            <span *ngIf="showTextBefore">{{metadata.editor.placeholder}}</span>
+            <input type="checkbox"
+                [id]="metadata.id"
+                [formControlName]="metadata.id" />
+                <span *ngIf="!showTextBefore">{{metadata.editor.placeholder}}</span>
+        </div>
+    </div>
+</ng-container>

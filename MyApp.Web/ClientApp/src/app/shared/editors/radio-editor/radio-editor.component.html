@@ -1,0 +1,12 @@
+<ng-container [formGroup]="form">
+    <div class="form-group">
+        <app-label-display [metadata]="labelMetadata"></app-label-display>
+        <div class="form-control form-control-radio">
+            <span *ngIf="showTextBefore">{{metadata.editor.placeholder}}</span>
+            <input type="radio"
+                [id]="metadata.id"
+                [formControlName]="metadata.id" />
+                <span *ngIf="!showTextBefore">{{metadata.editor.placeholder}}</span>
+        </div>
+    </div>
+</ng-container>

@@ -1,0 +1,23 @@
+<h1 id="tableLabel">Test Editors</h1>
+
+<form [formGroup]="myForm" *ngIf="myForm">
+
+    <div class="container-fluid">
+        <div class="row">
+            <ng-container *ngFor="let metadata of properties">
+                <div [ngClass]="{
+                    'col-sm-3': metadata.width === controlWidth.normal,
+                    'col-sm-6': metadata.width === controlWidth.half,
+                    'col-sm-12': metadata.width === controlWidth.full
+                    }">
+                    <ng-template appDynamicEditorHost
+                        [metadata]="metadata"
+                        [value]=""
+                        [form]="myForm">
+                    </ng-template>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+</form>
