@@ -23,14 +23,12 @@ import { CheckboxEditorComponent } from '../editors/checkbox-editor/checkbox-edi
 import { RadioEditorComponent } from '../editors/radio-editor/radio-editor.component';
 
 @NgModule({
-
     declarations: [
         // Displays
         BooleanDisplayComponent,
         CheckboxDisplayComponent,
         LabelDisplayComponent,
         StringDisplayComponent,
-        
         // Editors
         BooleanEditorComponent,
         CheckboxEditorComponent,
@@ -39,12 +37,10 @@ import { RadioEditorComponent } from '../editors/radio-editor/radio-editor.compo
         PasswordEditorComponent,
         StringEditorComponent,
         RadioEditorComponent,
-        
         // Directives
         DynamicDisplayDirective,
         DynamicEditorDirective
     ],
-
     imports: [
         CommonModule,
         ReactiveFormsModule,
@@ -53,7 +49,6 @@ import { RadioEditorComponent } from '../editors/radio-editor/radio-editor.compo
         // List of Icons: https://fontawesome.com/icons?d=gallery&p=7&s=brands,regular,solid&m=free
         FontAwesomeModule
     ],
-
     exports: [
         CommonModule,
         ReactiveFormsModule,
@@ -61,30 +56,11 @@ import { RadioEditorComponent } from '../editors/radio-editor/radio-editor.compo
         DynamicDisplayDirective,
         DynamicEditorDirective
     ],
-  
-    entryComponents: [
-        // Displays
-        BooleanDisplayComponent,
-        CheckboxDisplayComponent,
-        LabelDisplayComponent,
-        StringDisplayComponent,
-
-        // Editors
-        BooleanEditorComponent,
-        CheckboxEditorComponent,
-        DateEditorComponent,
-        EmailEditorComponent,
-        PasswordEditorComponent,
-        StringEditorComponent,
-        RadioEditorComponent
-    ],
-
     providers: [
         DynamicDisplayRegistryService,
         DynamicEditorRegistryService,
         MetadataControlService
     ]
-
 })
 
 export class DynamicPageModule {
