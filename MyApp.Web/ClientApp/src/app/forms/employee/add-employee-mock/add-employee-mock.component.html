@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Add New Employee</h1>
+
+<p>New Employee Information<br />* Required Fields</p>
+
+<form [formGroup]="myForm" *ngIf="myForm">
+
+    <ng-container *ngFor="let metadata of properties">
+        <ng-template appDynamicEditorHost
+            [metadata]="metadata"
+            [value]=""
+            [form]="myForm">
+        </ng-template>
+    </ng-container>
+
+    <div class="control-group">
+        <div class="controls">
+            <button class="btn btn-success"
+                (click)="save()">Add Employee</button>
+        </div>
+    </div>
+
+</form>
