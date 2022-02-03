@@ -1,6 +1,6 @@
 import { Component, Injector, OnInit } from '@angular/core';
-import { MetadataControlService } from 'src/app/shared/services/metadata-control.service';
-import { ComponentMetadataPage } from '../../../shared/models/component-metadata-page.model';
+import { ComponentMetadataPage } from '../../../shared/dynamicForms/models';
+import { MetadataControlService } from '../../../shared/dynamicForms/services/metadata-control.service';
 
 @Component({
   selector: 'app-test-editors',
@@ -9,10 +9,7 @@ import { ComponentMetadataPage } from '../../../shared/models/component-metadata
 })
 export class TestEditorsComponent extends ComponentMetadataPage implements OnInit {
 
-  constructor(
-    inject: Injector,
-    private metadataFormControlService: MetadataControlService
-    ) {
+  constructor(inject: Injector,private metadataFormControlService: MetadataControlService) {
       super(inject);
       this.metadataFormControlService.fillControl(this);
   }

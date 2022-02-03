@@ -7,15 +7,15 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
 import { AngularMyDatePickerModule } from 'angular-mydatepicker';
-
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { DynamicPageModule } from './shared/dynamic-page/dynamic-page.module';
 import { AddEmployeeComponent } from './forms/employee/add/add-employee.component';
-import { MessageHandler } from './shared/services/message-handler.service';
 import { TestEditorsComponent } from './forms/test/test-editors/test-editors.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DynamicPageModule } from './shared/dynamicForms/dynamic-page.module';
+import { MessageHandler } from './shared/dynamicForms/services/message-handler.service';
+import { AddEmployeeMockComponent } from './forms/employee/add-employee-mock/add-employee-mock.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NavMenuComponent,
     HomeComponent,
     AddEmployeeComponent,
-    TestEditorsComponent
+    TestEditorsComponent,
+    AddEmployeeMockComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -35,7 +36,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AngularMyDatePickerModule,
     RouterModule.forRoot([
         { path: '', component: HomeComponent, pathMatch: 'full' },
-        { path: 'employee/add', component: AddEmployeeComponent },
+        { path: 'employee/add', component: AddEmployeeMockComponent },
         { path: 'test/editors', component: TestEditorsComponent }
       ],
       { relativeLinkResolution: 'legacy' }),
